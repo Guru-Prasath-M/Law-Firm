@@ -119,6 +119,14 @@ document
 
 const testimonialSwiper = new Swiper(".testimonialSwiper", {
 
+    effect: "coverflow",
+
+    grabCursor: true,
+
+    centeredSlides: true,
+
+    slidesPerView: "auto",
+
     loop: true,
 
     autoplay: {
@@ -126,27 +134,22 @@ const testimonialSwiper = new Swiper(".testimonialSwiper", {
         disableOnInteraction: false
     },
 
+    coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 120,
+        modifier: 1,
+        slideShadows: true
+    },
+
     navigation: {
         nextEl: ".testimonial-next",
         prevEl: ".testimonial-prev"
     },
 
-    spaceBetween: 30,
-
-    breakpoints: {
-
-        0: {
-            slidesPerView: 1
-        },
-
-        768: {
-            slidesPerView: 2
-        },
-
-        992: {
-            slidesPerView: 3
-        }
-
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
     }
 
 });

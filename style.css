@@ -1509,50 +1509,57 @@ nav ul li a:hover {
 }
 
 .testimonialSwiper{
-    max-width:1300px;
-    margin:auto;
-    padding:20px 10px 70px;
+    width:100%;
+    padding-top:30px;
+    padding-bottom:80px;
+}
+
+.testimonialSwiper .swiper-slide{
+    width:350px;
+    height:auto;
 }
 
 .testimonial-card{
     background:#fff;
-    border-radius:15px;
-    padding:30px;
+    border-radius:20px;
+    padding:35px 25px;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
     transition:.4s;
-    height:100%;
 }
 
 .testimonial-card:hover{
     transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 
 .testimonial-card img{
-    width:100px;
-    height:100px;
+    width:110px;
+    height:110px;
     border-radius:50%;
     object-fit:cover;
-    border:4px solid #b9975b;
-    margin-bottom:20px;
-}
 
-.testimonial-card p{
-    font-size:16px;
-    line-height:1.8;
-    color:#555;
+    border:4px solid #b9975b;
+
     margin-bottom:20px;
 }
 
 .testimonial-card h3{
     color:#0f172a;
-    font-size:20px;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.testimonial-card p{
+    color:#555;
+    line-height:1.8;
+    font-size:15px;
 }
 
 .testimonial-prev,
 .testimonial-next{
-    color:#0f172a !important;
+    color:#b9975b !important;
 }
 
 .testimonial-prev::after,
@@ -1560,11 +1567,14 @@ nav ul li a:hover {
     font-size:30px;
 }
 
+.swiper-pagination-bullet-active{
+    background:#b9975b !important;
+}
+
 @media(max-width:768px){
 
-    .testimonial-prev,
-    .testimonial-next{
-        display:none;
+    .testimonialSwiper .swiper-slide{
+        width:280px;
     }
 }
 
