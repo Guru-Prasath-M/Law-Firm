@@ -236,8 +236,7 @@
 
     <section class="services" id="services">
 
-        <div class="section-title"
-        data-aos="fade-up">
+        <div class="section-title">
             <span>OUR SERVICES</span>
             <h2>Legal Services We Provide</h2>
         </div>
@@ -453,8 +452,7 @@
         <h2>Meet Our Legal Experts</h2>
     </div>
 
-    <div class="swiper teamSwiper"
-    data-aos="fade-up">
+    <div class="swiper teamSwiper">
 
         <div class="swiper-wrapper">
 
@@ -616,8 +614,7 @@
         <h2>Client Testimonials</h2>
     </div>
 
-    <div class="swiper testimonialSwiper"
-     data-aos="zoom-in">
+    <div class="swiper testimonialSwiper">
 
         <div class="swiper-wrapper">
 
@@ -884,14 +881,13 @@
 
 
 
-    <footer class="footer"
-     data-aos="fade-up">
+    <footer class="footer">
 
         <div class="footer-container">
 
             <!-- Company Info -->
 
-            <div class="footer-column">
+            <div class="footer-column" data-aos="fade-up">
 
                 <div class="footer-logo">
                     ⚖ MS LAW FIRM
@@ -1096,9 +1092,12 @@
 
 <script>
 AOS.init({
-    duration: 1000,
+    duration: 800,
     once: true,
-    offset: 100
+    offset: 50,
+    disable: function () {
+        return window.innerWidth < 768;
+    }
 });
 </script>
 </body>

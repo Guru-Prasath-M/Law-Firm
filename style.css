@@ -14,6 +14,22 @@ body {
 }
 
 
+html,
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.swiper{
+    width:100%;
+}
+
+
 
 .disclaimer-overlay{
     position:fixed;
