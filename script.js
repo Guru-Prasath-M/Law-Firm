@@ -114,6 +114,44 @@ document
     });
 
 
+
+// Testimonal
+
+const testimonialSwiper = new Swiper(".testimonialSwiper", {
+
+    loop: true,
+
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
+
+    navigation: {
+        nextEl: ".testimonial-next",
+        prevEl: ".testimonial-prev"
+    },
+
+    spaceBetween: 30,
+
+    breakpoints: {
+
+        0: {
+            slidesPerView: 1
+        },
+
+        768: {
+            slidesPerView: 2
+        },
+
+        992: {
+            slidesPerView: 3
+        }
+
+    }
+
+});
+
+
     // FAQ Accordion
 
 document.addEventListener("DOMContentLoaded", () => {

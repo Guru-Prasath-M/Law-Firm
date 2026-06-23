@@ -1504,85 +1504,67 @@ nav ul li a:hover {
 ========================== */
 
 .testimonials{
-    padding:40px 6%;
+    padding:80px 6%;
     background:#f8f8f8;
 }
 
-.testimonial-container{
-    max-width:1200px;
+.testimonialSwiper{
+    max-width:1300px;
     margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:35px;
+    padding:20px 10px 70px;
 }
 
 .testimonial-card{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
+    background:#fff;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
     transition:.4s;
+    height:100%;
 }
 
 .testimonial-card:hover{
-    transform:translateX(10px);
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 
-.client-info{
-    display:flex;
-    align-items:center;
-    min-width:320px;
-}
-
-.client-box{
-    width:220px;
-    background:#0f172a;
-    color:#fff;
-    padding:25px 20px;
-    border-left:5px solid #b9975b;
-}
-
-.client-box:hover{
-    background-color: #b9975b;
-    border-left: 5px solid #0f172a;
-
-}
-
-.client-box h3{
-    font-size:22px;
-    line-height:1.4;
-}
-
-.client-info img{
-    width:110px;
-    height:110px;
+.testimonial-card img{
+    width:100px;
+    height:100px;
     border-radius:50%;
     object-fit:cover;
     border:4px solid #b9975b;
-    margin-left:-20px;
+    margin-bottom:20px;
 }
 
-.testimonial-content{
-    flex:1;
-}
-
-.testimonial-content p{
-    font-size:20px;
+.testimonial-card p{
+    font-size:16px;
     line-height:1.8;
-    color:#333;
+    color:#555;
+    margin-bottom:20px;
 }
 
-/* Responsive */
+.testimonial-card h3{
+    color:#0f172a;
+    font-size:20px;
+}
 
-@media(max-width:991px){
+.testimonial-prev,
+.testimonial-next{
+    color:#0f172a !important;
+}
 
-    .testimonial-card{
-        flex-direction:column;
-        align-items:flex-start;
-    }
+.testimonial-prev::after,
+.testimonial-next::after{
+    font-size:30px;
+}
 
-    .testimonial-content p{
-        font-size:17px;
+@media(max-width:768px){
+
+    .testimonial-prev,
+    .testimonial-next{
+        display:none;
     }
 }
 
