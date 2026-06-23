@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 icon.textContent = "+";
             } else {
                 answer.style.maxHeight = answer.scrollHeight + "px";
-                icon.textContent = "−";
+                icon.textContent = "-";
             }
 
         });
