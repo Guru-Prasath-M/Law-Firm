@@ -1053,7 +1053,7 @@ nav ul li a:hover {
 .service-content ul li{
     list-style-type: disc;
     font-size: 13px;
-    margin-bottom: 6px;
+    margin-bottom: 16px;
     line-height: 1.6;
 }
 
@@ -1247,6 +1247,8 @@ nav ul li a:hover {
     background:#f8f8f8;
 }
 
+
+
 .teamSwiper{
     max-width:1300px;
     margin:auto;
@@ -1335,16 +1337,12 @@ nav ul li a:hover {
 
 @media(max-width:991px){
 
-    .team{
-        padding:70px 4%;
+    .testimonial-card{
+        min-height:280px;
     }
 
-    .team-card img{
-        height:280px;
-    }
-
-    .team-content h3{
-        font-size:22px;
+    .testimonial-card h3{
+        font-size:20px;
     }
 }
 
@@ -1352,44 +1350,32 @@ nav ul li a:hover {
 
 @media(max-width:768px){
 
-    .team{
-        padding:60px 4%;
-    }
-
-    .teamSwiper{
+    .testimonialSwiper{
         padding-bottom:60px;
     }
 
-    .team-card img{
-        height:250px;
+    .testimonial-card{
+        min-height:auto;
+        padding:25px 15px;
     }
 
-    .team-content{
-        padding:20px;
+    .testimonial-card img{
+        width:80px;
+        height:80px;
     }
 
-    .team-content h3{
-        font-size:20px;
+    .testimonial-card h3{
+        font-size:18px;
     }
 
-    .team-content p{
-        font-size:15px;
+    .testimonial-card p{
+        font-size:14px;
+        line-height:1.7;
     }
 
-    .view-btn{
-        width:100%;
-        text-align:center;
-    }
-
-    .team-prev,
-    .team-next{
-        width:40px !important;
-        height:40px !important;
-    }
-
-    .team-prev::after,
-    .team-next::after{
-        font-size:14px !important;
+    .testimonial-prev,
+    .testimonial-next{
+        display:none;
     }
 }
 
@@ -1522,42 +1508,40 @@ nav ul li a:hover {
 .testimonials{
     padding:80px 6%;
     background:#f8f8f8;
+    overflow: hidden;
 }
 
 .testimonialSwiper{
     width:100%;
-    padding-top:30px;
-    padding-bottom:80px;
+    padding:30px 10px 80px;
 }
 
 .testimonialSwiper .swiper-slide{
-    width:350px;
+    width:320px;
+    max-width:90%;
     height:auto;
 }
 
 .testimonial-card{
     background:#fff;
     border-radius:20px;
-    padding:35px 25px;
+    padding:30px 20px;
     text-align:center;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
-
-    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    min-height:320px;
 }
+
 
 .testimonial-card:hover{
     transform:translateY(-10px);
 }
 
 .testimonial-card img{
-    width:110px;
-    height:110px;
+    width:90px;
+    height:90px;
     border-radius:50%;
     object-fit:cover;
-
     border:4px solid #b9975b;
-
     margin-bottom:20px;
 }
 
@@ -1867,6 +1851,7 @@ nav ul li a:hover {
     height:42px;
     border-radius:50%;
     background:#b9975b;
+    color: #0f172a;
     display:flex;
     align-items:center;
     justify-content:center;

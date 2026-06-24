@@ -119,42 +119,53 @@ document
 
 const testimonialSwiper = new Swiper(".testimonialSwiper", {
 
-    effect: "coverflow",
+    loop:true,
 
-    grabCursor: true,
-
-    centeredSlides: true,
-
-    slidesPerView: "auto",
-
-    loop: true,
-
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false
+    autoplay:{
+        delay:2500,
+        disableOnInteraction:false
     },
 
-    coverflowEffect: {
-        rotate: 20,
-        stretch: 0,
-        depth: 120,
-        modifier: 1,
-        slideShadows: true
+    navigation:{
+        nextEl:".testimonial-next",
+        prevEl:".testimonial-prev"
     },
 
-    navigation: {
-        nextEl: ".testimonial-next",
-        prevEl: ".testimonial-prev"
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true
     },
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
+    breakpoints:{
+
+        0:{
+            slidesPerView:1,
+            spaceBetween:20,
+            effect:"slide"
+        },
+
+        768:{
+            slidesPerView:2,
+            spaceBetween:25,
+            effect:"slide"
+        },
+
+        1200:{
+            slidesPerView:5,
+            centeredSlides:true,
+            effect:"coverflow",
+            coverflowEffect:{
+                rotate:0,
+                stretch:0,
+                depth:100,
+                modifier:1,
+                slideShadows:false
+            }
+        }
+
     }
 
 });
-
-
     // FAQ Accordion
 
 document.addEventListener("DOMContentLoaded", () => {
