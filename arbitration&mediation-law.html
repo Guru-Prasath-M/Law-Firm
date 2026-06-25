@@ -26,8 +26,8 @@
             </a>
 
             <div class="menu-toggle" id="menuToggle">
-    <i class="fa-solid fa-bars"></i>
-</div>
+                <i class="fa-solid fa-bars"></i>
+            </div>
 
             <nav>
                 <ul id="navMenu">
@@ -37,18 +37,18 @@
                     <li><a href="./index.html#about">About</a></li>
 
                     <li class="dropdown">
-                        <a href="./index.html#services">
-                            Services <i class="fa-solid fa-chevron-down"></i>
+                        <a href="javascript:void(0);">
+                            Services
+                            <i class="fa-solid fa-chevron-down"></i>
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a href="./corporate-law.html">Corporate Law</a></li>
-                            <li><a href="./civil-litigation.html">Civil Litigation</a></li>
-                            <li><a href="./family-law.html">Family Law</a></li>
-                            <li><a href="./property-law.html">Property Law</a></li>
-                            <li><a href="./arbitration&mediation-law.html">Arbitration & Mediation</a>
-                            </li>
-                            <li><a href="./legal-advisory.html">Legal Advisory</a></li>
+                            <li><a href="corporate-law.html">Corporate Law</a></li>
+                            <li><a href="civil-litigation.html">Civil Litigation</a></li>
+                            <li><a href="family-law.html">Family Law</a></li>
+                            <li><a href="property-law.html">Property Law</a></li>
+                            <li><a href="arbitration&mediation-law.html">Arbitration & Mediation</a></li>
+                            <li><a href="legal-advisory.html">Legal Advisory</a></li>
                         </ul>
                     </li>
 
@@ -128,9 +128,24 @@
 
     <section class="why-us">
 
-       <div class="section-title"> <span>WHY CHOOSE US</span> <h2>Why Clients Choose Our ADR Services</h2> </div>
+        <div class="section-title"> <span>WHY CHOOSE US</span>
+            <h2>Why Clients Choose Our ADR Services</h2>
+        </div>
 
-        <div class="why-grid"> <div class="why-card"> <i class="fa-solid fa-clock"></i> <h3>Faster Resolution</h3> </div> <div class="why-card"> <i class="fa-solid fa-money-bill-wave"></i> <h3>Cost Effective</h3> </div> <div class="why-card"> <i class="fa-solid fa-user-shield"></i> <h3>Confidential Process</h3> </div> <div class="why-card"> <i class="fa-solid fa-handshake"></i> <h3>Practical Solutions</h3> </div> </div>
+        <div class="why-grid">
+            <div class="why-card"> <i class="fa-solid fa-clock"></i>
+                <h3>Faster Resolution</h3>
+            </div>
+            <div class="why-card"> <i class="fa-solid fa-money-bill-wave"></i>
+                <h3>Cost Effective</h3>
+            </div>
+            <div class="why-card"> <i class="fa-solid fa-user-shield"></i>
+                <h3>Confidential Process</h3>
+            </div>
+            <div class="why-card"> <i class="fa-solid fa-handshake"></i>
+                <h3>Practical Solutions</h3>
+            </div>
+        </div>
 
     </section>
 
@@ -141,7 +156,7 @@
 
         <h2>Need Help Resolving A Dispute?</h2>
 
-       <p> Speak with our arbitration and mediation professionals today. </p>
+        <p> Speak with our arbitration and mediation professionals today. </p>
 
         <a href="index.html#contact">
             Get Free Consultation
@@ -243,24 +258,52 @@
     </footer>
 
     <script>
-const menuToggle = document.querySelector(".menu-toggle");
-const navMenu = document.getElementById("navMenu");
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-});
+        const dropdown = document.querySelector(".dropdown");
+        const dropdownToggle = document.querySelector(".dropdown > a");
 
-const dropdown = document.querySelector(".dropdown");
+        menuToggle.addEventListener("click", function (e) {
 
-dropdown.addEventListener("click", function(e){
+            e.stopPropagation();
+            navMenu.classList.toggle("active");
 
-    if(window.innerWidth <= 991){
-        e.preventDefault();
-        this.classList.toggle("active");
-    }
+        });
 
-});
-</script>
+        dropdownToggle.addEventListener("click", function (e) {
+
+            if (window.innerWidth <= 991) {
+
+                e.preventDefault();
+                dropdown.classList.toggle("active");
+
+            }
+
+        });
+
+        document.addEventListener("click", function (e) {
+
+            if (!e.target.closest("header")) {
+
+                navMenu.classList.remove("active");
+                dropdown.classList.remove("active");
+
+            }
+
+        });
+
+        document.querySelectorAll(".dropdown-menu a").forEach(link => {
+
+            link.addEventListener("click", function () {
+
+                navMenu.classList.remove("active");
+                dropdown.classList.remove("active");
+
+            });
+
+        });
+    </script>
 
 </body>
 
