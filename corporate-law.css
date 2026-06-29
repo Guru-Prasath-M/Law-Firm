@@ -471,3 +471,151 @@ nav ul li{
     background:#b9975b;
     color:#fff;
 }
+
+
+
+
+
+
+
+/* Corporate Law Image */
+
+.service-image{
+    margin:50px 0;
+    text-align:center;
+}
+
+.service-image img{
+    width:100%;
+    max-width:1100px;
+    height:500px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    transition:0.4s ease;
+}
+
+.service-image img:hover{
+    transform:scale(1.02);
+}
+
+/* Tablet */
+
+@media (max-width:991px){
+
+    .service-image{
+        margin:40px 0;
+    }
+
+    .service-image img{
+        height:380px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .service-image{
+        margin:30px 0;
+    }
+
+    .service-image img{
+        height:260px;
+        border-radius:10px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+    .service-image img{
+        height:200px;
+    }
+
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+}
+
+.logo h2{
+    color:#0f172a;
+    font-size:34px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.logo:hover h2{
+    color:#b9975b;
+}
+
+.logo:hover .logo-icon{
+    transform:rotate(-10deg);
+}
+
+.logo-icon{
+    font-size:34px;
+    color:#b9975b;
+    transition:.3s;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: #b9975b;
+}
+
+.btn {
+    text-decoration: none;
+    background: #b9975b;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 17px;
+    transition: .3s;
+    border: none;
+}
+
+.btn:hover {
+    background: #9a7a43;
+    transform: translateY(-2px);
+}
