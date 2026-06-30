@@ -1872,8 +1872,15 @@ nav ul li a:hover {
 }
 
 .footer-column p{
+    text-decoration:none;
+    transition:.3s;
     color:#cbd5e1;
     line-height:1.8;
+}
+
+.footer-column p:hover{
+    cursor: pointer;
+    color:#b9975b;
 }
 
 .footer-column h3{
@@ -1949,6 +1956,17 @@ nav ul li a:hover {
     color:#b9975b;
     font-size:16px;
     width:20px;
+}
+
+
+.footer-contact a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-contact a:hover{
+    color:#b9975b;
 }
 
 /* Responsive */
