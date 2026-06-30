@@ -1950,6 +1950,7 @@ nav ul li a:hover {
     gap:12px;
     margin-bottom:15px;
     color:#cbd5e1;
+    justify-content: center;
 }
 
 .footer-contact li i{
@@ -1975,6 +1976,7 @@ nav ul li a:hover {
 
     .footer-container{
         grid-template-columns:repeat(2,1fr);
+        justify-content:center;
     }
 }
 
@@ -1989,7 +1991,6 @@ nav ul li a:hover {
         justify-content:center;
     }
 }
-
 
 
 img{
