@@ -44,6 +44,8 @@ navLinks.forEach(link => {
 
 
 
+
+
 // Hero Slider
 
 document.addEventListener("DOMContentLoaded", () => {
